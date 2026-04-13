@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="VulnerableDriverReadWrite/VulnerableDriverReadWrite.vcxproj" Id="de22811e-3c67-436d-8422-75a9e695df6f" />
+</Solution>
