@@ -25,7 +25,7 @@ public:
 	void CleanUp();
 
 	void Read(UINT64* iDestinationAddr, UINT64 iTargetAddr, UINT64 iSize);
-	void Write(BYTE* iDestinationAddr, UINT64 data);
+	void Write(UINT64 iDestinationAddr, UINT64 data);
 
 	UINT64 GetEPROCESS();
 };

